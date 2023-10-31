@@ -1,0 +1,19 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+x=np.linspace(0,5,1000)
+y=np.exp(x)
+y_1=np.square(x)
+
+clt=[]
+
+i=1
+while i < 50001:
+    rand_array=np.random.randint(y_1.item(0),y_1.item(999), size=(100))
+    mean_rand_array=np.mean(rand_array)
+    clt.append(mean_rand_array)
+    i+=1
+
+plt.hist(clt)
+plt.xlim([8,16])
+plt.show()
